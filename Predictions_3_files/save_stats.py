@@ -15,10 +15,10 @@ def load_results(filename):
                     results.append(sent)
                     sent = []
                 continue
-            gold_head = splits[4]
-            gold_label = splits[5]
-            pred_head = splits[6]
-            pred_label = splits[7]
+            gold_head = splits[-4]
+            gold_label = splits[-3]
+            pred_head = splits[-2]
+            pred_label = splits[-1]
             sent.append((gold_head, gold_label, pred_head, pred_label))
     print('Total Number of sentences ' + str(len(results)))
     return results
